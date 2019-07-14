@@ -9,22 +9,22 @@ pipeline {
     }
     stage('Build') { 
       steps { 
-        sh 'source ~/.bashrc && cd adderservice && npm install'
+        sh 'source /Users/Shared/Jenkins/.bashrc && cd adderservice && npm install'
       }
     }
     stage('Test'){
       steps {
-        sh 'source ~/.bashrc && cd adderservice && npm test'
+        sh 'source /Users/Shared/Jenkins/.bashrc && cd adderservice && npm test'
       }
     }
     stage('Container'){
       steps {
-        sh 'source ~/.bashrc && cd adderservice && sh build.sh container'
+        sh 'source /Users/Shared/Jenkins/.bashrc && cd adderservice && sh build.sh container'
       }
     }
     stage('Deploy'){
       steps {
-        sh 'source ~/.bashrc && cd adderservice && sh build.sh deploy'
+        sh 'source /Users/Shared/Jenkins/.bashrc && cd adderservice && sh build.sh deploy'
       }
     }
   }
