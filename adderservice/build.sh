@@ -1,5 +1,6 @@
 #!/bin/bash
-source ~/.bashrc
+#source ~/.bashrc
+source /Users/Shared/Jenkins/.bashrc
 
 GITSHA=$(git rev-parse --short HEAD)
 
